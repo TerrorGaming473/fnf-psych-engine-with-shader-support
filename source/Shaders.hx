@@ -99,19 +99,19 @@ class ScanlineEffect extends Effect
 	public var shader:Scanline;
 	public function new (lockAlpha){
 		shader = new Scanline();
-		shader.data.lockAlpha.value = [lockAlpha];
+		shader.data.lockAlpha.value = [false];
 	}
 	
 	
 }
 
-
+//fixing this shit for other platforms cause the fucking shaders don't wanna work 
 class Scanline extends FlxShader
 {
 	public function new(){super('
 		////pragma header
 		const float scale = 1.0;
-	uniform bool lockAlpha = false;
+	uniform bool lockAlpha;
 		void main()
 		{
 			if (mod(floor(openfl_TextureCoordv.y * openfl_TextureSize.y / scale), 2.0) == 0.0 ){
