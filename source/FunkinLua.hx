@@ -1724,10 +1724,11 @@ Lua_helper.add_callback(lua, "clearShadersFromCamera", function(cameraName)
 			
 			PlayState.instance.addShaderToCamera(camera, new ThreeDEffect(xrotation,yrotation,zrotation,depth));
 			
-		});
+		}); 
+		//bruh 
 		Lua_helper.add_callback(lua, "addBloomEffect", function(camera:String,intensity:Float = 0.35,blurSize:Float=1.0) {
 			
-			PlayState.instance.addShaderToCamera(camera, new BloomEffect(blurSize/512.0,intensity));
+			PlayState.instance.addShaderToCamera(camera, new BloomEffect(blurSize,intensity));
 			
 		});
 		Lua_helper.add_callback(lua, "clearEffects", function(camera:String) {
