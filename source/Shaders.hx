@@ -265,7 +265,7 @@ class GrainEffect extends Effect {
 		shader.data.lumamount.value = [lumamount];
 		shader.data.grainsize.value = [grainsize];
 		shader.data.lockAlpha.value = [lockAlpha]; 
-		shader.data.coloramount.value = [coloramount]
+		shader.data.coloramount.value = [coloramount];
 		shader.data.uTime.value = [FlxG.random.float(0,8)];
 		PlayState.instance.shaderUpdates.push(update);
 	}
