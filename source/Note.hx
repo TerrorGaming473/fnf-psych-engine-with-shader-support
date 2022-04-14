@@ -7,7 +7,9 @@ import flixel.math.FlxMath;
 import flixel.util.FlxColor;
 import flash.display.BitmapData;
 import editors.ChartingState;
-
+#if POLYMOD_ALLOWED
+import polymod.format.ParseRules.TargetSignatureElement;
+#end
 using StringTools;
 
 typedef EventNote = {
